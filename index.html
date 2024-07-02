@@ -192,20 +192,29 @@
                 </div>
              </div>
              <div class="col">
-              <form action="https://formspree.io/f/mnqerkej" method="POST" class="needs-validation">
-                  <div class="form-control">
-                    <div class="form-inputs">
-                  <input type="text" name="name" id="nameField" class="input-field" placeholder="Name" required>
-              <input type="email" name="_replyto" id="emailField" class="input-field" placeholder="Email" required>
-                </div>
-                <div class="text-area">
-              <textarea name="message" id="messageField" class="input-field" placeholder="Message" required></textarea>
-                </div>
-            <div class="form-button">
-              <button type="submit" class="btn" id="submitButton">Send <i class="uil uil-message"></i></button>
-                </div>
-              </div>
-            </form>
+             <form action="https://formspree.io/f/mnqerkej" method="POST" class="needs-validation" novalidate>
+  <div class="form-control">
+    <div class="form-inputs">
+      <input type="text" id="nameField" class="input-field" name="name" placeholder="Name" required>
+      <div class="invalid-feedback">
+        Please enter your name.
+      </div>
+      <input type="email" id="emailField" class="input-field" name="email" placeholder="Email" required>
+      <div class="invalid-feedback">
+        Please enter a valid email address.
+      </div>
+    </div>
+    <div class="text-area">
+      <textarea id="messageField" name="message" placeholder="Message" required></textarea>
+      <div class="invalid-feedback">
+        Please enter a message.
+      </div>
+    </div>
+    <div class="form-button">
+      <button type="submit" class="btn" id="submitButton">Send <i class="uil uil-message"></i></button>
+    </div>
+  </div>
+</form>
 
              </div>
           </div>
