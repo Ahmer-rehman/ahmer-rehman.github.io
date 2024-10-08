@@ -6,10 +6,6 @@ Welcome to my personal website repository! This website showcases my portfolio, 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Features
 - Portfolio of projects
