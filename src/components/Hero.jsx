@@ -94,10 +94,6 @@ export default function Hero() {
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-4">
             <a
               href="#projects"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-              }}
               className="group relative px-7 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-violet-600 to-cyan-500 hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all duration-300 hover:-translate-y-0.5"
             >
               View My Work
@@ -105,10 +101,6 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-              }}
               className="glow-border px-7 py-3 rounded-xl font-semibold text-violet-300 hover:text-white hover:bg-violet-500/10 transition-all duration-300"
             >
               Contact Me
@@ -141,10 +133,6 @@ export default function Hero() {
       {/* scroll indicator */}
       <motion.a
         href="#about"
-        onClick={(e) => {
-          e.preventDefault();
-          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}

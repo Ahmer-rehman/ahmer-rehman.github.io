@@ -21,7 +21,7 @@ function DistortedOrb() {
 
   return (
     <mesh ref={mesh} scale={1.25}>
-      <sphereGeometry args={[1, 96, 96]} />
+      <sphereGeometry args={[1, 48, 48]} />
       <MeshDistortMaterial
         color="#8b5cf6"
         emissive="#7c3aed"
@@ -103,8 +103,8 @@ export default function HeroOrb() {
         <WireShell />
 
         {/* magical particle dust around the orb */}
-        <Sparkles count={90} scale={5.5} size={3.5} speed={0.45} color="#a78bfa" />
-        <Sparkles count={50} scale={4.5} size={2.5} speed={0.3} color="#22d3ee" />
+        <Sparkles count={40} scale={5.5} size={3.5} speed={0.45} color="#a78bfa" />
+        <Sparkles count={25} scale={4.5} size={2.5} speed={0.3} color="#22d3ee" />
 
         <OrbitRing radius={2.0} speed={0.45} tilt={[Math.PI / 2.4, 0.3, 0]} color="#22d3ee" />
         <OrbitRing radius={2.4} speed={-0.3} tilt={[Math.PI / 1.9, -0.4, 0.2]} color="#a78bfa" />

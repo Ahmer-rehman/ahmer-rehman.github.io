@@ -35,9 +35,9 @@ function Layer({ count, radius, color, size, xSpeed, ySpeed }) {
 export default function StarField() {
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Layer count={3500} radius={1.6} color="#c4b5fd" size={0.0035} xSpeed={1 / 16} ySpeed={1 / 20} />
-      <Layer count={1500} radius={1.3} color="#67e8f9" size={0.0028} xSpeed={1 / 22} ySpeed={1 / 14} />
-      <Layer count={400} radius={1.1} color="#f9a8d4" size={0.005} xSpeed={1 / 28} ySpeed={1 / 26} />
+      <Layer count={1200} radius={1.6} color="#c4b5fd" size={0.0035} xSpeed={1 / 16} ySpeed={1 / 20} />
+      <Layer count={500} radius={1.3} color="#67e8f9" size={0.0028} xSpeed={1 / 22} ySpeed={1 / 14} />
+      <Layer count={150} radius={1.1} color="#f9a8d4" size={0.005} xSpeed={1 / 28} ySpeed={1 / 26} />
     </group>
   );
 }

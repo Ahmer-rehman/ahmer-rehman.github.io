@@ -2,18 +2,16 @@ import { useEffect } from "react";
 import {
   motion,
   useScroll,
-  useSpring,
   useMotionValue,
 } from "framer-motion";
 
 /** thin gradient progress bar pinned to the very top */
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 24 });
 
   return (
     <motion.div
-      style={{ scaleX }}
+      style={{ scaleX: scrollYProgress }}
       className="pointer-events-none fixed top-0 left-0 right-0 h-[3px] z-[60] origin-left bg-gradient-to-r from-violet-500 via-fuchsia-400 to-cyan-400 shadow-[0_0_12px_rgba(139,92,246,0.8)]"
     />
   );

@@ -3,11 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const links = ["About", "Skills", "Experience", "Projects", "Contact"];
 
-function scrollToSection(e, id) {
-  e.preventDefault();
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-}
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -28,11 +23,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        <a
-          href="#top"
-          onClick={(e) => scrollToSection(e, "top")}
-          className="font-mono text-xl font-bold tracking-tight"
-        >
+        <a href="#top" className="font-mono text-xl font-bold tracking-tight">
           <span className="text-gradient">AR</span>
         </a>
 
@@ -47,7 +38,6 @@ export default function Navbar() {
             >
               <a
                 href={`#${link.toLowerCase()}`}
-                onClick={(e) => scrollToSection(e, link.toLowerCase())}
                 className="text-sm text-slate-300 hover:text-white transition-colors relative group font-medium"
               >
                 {link}
@@ -93,10 +83,7 @@ export default function Navbar() {
               <li key={link}>
                 <a
                   href={`#${link.toLowerCase()}`}
-                  onClick={(e) => {
-                    scrollToSection(e, link.toLowerCase());
-                    setOpen(false);
-                  }}
+                  onClick={() => setOpen(false)}
                   className="block px-6 py-3 text-slate-300 hover:text-white hover:bg-violet-500/10"
                 >
                   {link}
