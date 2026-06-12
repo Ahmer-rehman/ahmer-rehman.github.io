@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import {
   motion,
   useScroll,
+  useSpring,
   useMotionValue,
 } from "framer-motion";
 
