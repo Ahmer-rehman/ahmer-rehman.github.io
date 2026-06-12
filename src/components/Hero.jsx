@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { OrbScene } from "./Scene3D";
 import { profile } from "../data/resume";
-import profilePhoto from "../assets/profile.png";
 
 function Typewriter({ words }) {
   const [index, setIndex] = useState(0);
@@ -129,22 +129,12 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-          className="relative flex items-center justify-center"
+          className="h-[380px] md:h-[560px] cursor-grab active:cursor-grabbing"
         >
-          <div className="pointer-events-none absolute inset-0 bg-violet-600/25 rounded-3xl blur-[80px] scale-90" />
-          <div className="relative glow-border rounded-3xl p-1.5 bg-gradient-to-br from-violet-500/20 to-cyan-500/10 shadow-[0_0_60px_rgba(139,92,246,0.35)]">
-            <img
-              src={profilePhoto}
-              alt={`${profile.name}, ${profile.role}`}
-              className="w-full max-w-[420px] md:max-w-none rounded-[1.35rem] object-cover aspect-[4/5] md:aspect-auto md:h-[520px]"
-            />
-          </div>
-          <div className="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 glass rounded-full px-5 py-2 font-mono text-xs text-violet-200 whitespace-nowrap">
-            Full Stack Developer
-          </div>
+          <OrbScene />
         </motion.div>
       </div>
 
