@@ -50,10 +50,10 @@ const item = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center grid-bg overflow-hidden">
+    <section id="top" className="relative min-h-screen flex items-center grid-bg overflow-hidden">
       {/* radial glow */}
-      <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-violet-600/20 rounded-full blur-[140px] animate-pulse-glow" />
-      <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-cyan-500/15 rounded-full blur-[140px] animate-pulse-glow" />
+      <div className="pointer-events-none absolute top-1/4 -left-32 w-[500px] h-[500px] bg-violet-600/20 rounded-full blur-[140px] animate-pulse-glow" />
+      <div className="pointer-events-none absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-cyan-500/15 rounded-full blur-[140px] animate-pulse-glow" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 grid md:grid-cols-2 gap-8 items-center w-full">
         <motion.div variants={container} initial="hidden" animate="show">
@@ -83,7 +83,7 @@ export default function Hero() {
           <motion.p variants={item} className="mt-6 text-slate-400 max-w-lg leading-relaxed">
             I build <span className="text-violet-300">secure</span>,{" "}
             <span className="text-cyan-300">real-time</span>, and{" "}
-            <span className="text-pink-300">production-ready</span> web platforms — from
+            <span className="text-pink-300">production-ready</span> web platforms for
             SaaS document workflows to WebRTC communication systems.
           </motion.p>
 
@@ -94,6 +94,10 @@ export default function Hero() {
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-4">
             <a
               href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="group relative px-7 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-violet-600 to-cyan-500 hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all duration-300 hover:-translate-y-0.5"
             >
               View My Work
@@ -101,6 +105,10 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="glow-border px-7 py-3 rounded-xl font-semibold text-violet-300 hover:text-white hover:bg-violet-500/10 transition-all duration-300"
             >
               Contact Me
@@ -133,10 +141,14 @@ export default function Hero() {
       {/* scroll indicator */}
       <motion.a
         href="#about"
+        onClick={(e) => {
+          e.preventDefault();
+          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-slate-500 hover:text-violet-400 transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2 text-slate-500 hover:text-violet-400 transition-colors"
       >
         <div className="w-6 h-10 rounded-full border-2 border-current flex justify-center pt-2">
           <div className="w-1 h-2 rounded-full bg-current animate-scroll-wheel" />

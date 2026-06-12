@@ -3,6 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const links = ["About", "Skills", "Experience", "Projects", "Contact"];
 
+function scrollToSection(e, id) {
+  e.preventDefault();
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -23,8 +28,12 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-mono text-xl font-bold tracking-tight">
-          <span className="text-gradient">&lt;AR /&gt;</span>
+        <a
+          href="#top"
+          onClick={(e) => scrollToSection(e, "top")}
+          className="font-mono text-xl font-bold tracking-tight"
+        >
+          <span className="text-gradient">AR</span>
         </a>
 
         {/* desktop */}
@@ -38,11 +47,11 @@ export default function Navbar() {
             >
               <a
                 href={`#${link.toLowerCase()}`}
+                onClick={(e) => scrollToSection(e, link.toLowerCase())}
                 className="text-sm text-slate-300 hover:text-white transition-colors relative group font-medium"
               >
-                <span className="font-mono text-violet-400 mr-1 text-xs">0{i + 1}.</span>
                 {link}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-500 to-cyan-400 group-hover:w-full transition-all duration-300" />
+                <span className="pointer-events-none absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-500 to-cyan-400 group-hover:w-full transition-all duration-300" />
               </a>
             </motion.li>
           ))}
@@ -84,7 +93,10 @@ export default function Navbar() {
               <li key={link}>
                 <a
                   href={`#${link.toLowerCase()}`}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    scrollToSection(e, link.toLowerCase());
+                    setOpen(false);
+                  }}
                   className="block px-6 py-3 text-slate-300 hover:text-white hover:bg-violet-500/10"
                 >
                   {link}

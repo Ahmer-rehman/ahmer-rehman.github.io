@@ -11,20 +11,20 @@ const channels = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/ahmer-rehman",
+    value: "View Profile",
     href: profile.linkedin,
     icon: "in",
   },
   {
     label: "GitHub",
-    value: "github.com/Ahmer-rehman",
+    value: "View Repositories",
     href: profile.github,
     icon: "⌥",
   },
   {
     label: "Phone",
     value: profile.phone,
-    href: `tel:${profile.phone.replace(/\s/g, "")}`,
+    href: `tel:${profile.phone.replace(/[\s-]/g, "")}`,
     icon: "☏",
   },
 ];
@@ -45,7 +45,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-slate-400 max-w-xl mx-auto -mt-6 mb-12 text-lg"
         >
-          I'm currently open to new opportunities — including relocation and visa
+          I'm currently open to new opportunities, including relocation and visa
           sponsorship. Whether you have a project, a role, or just want to say hi, my
           inbox is always open.
         </motion.p>

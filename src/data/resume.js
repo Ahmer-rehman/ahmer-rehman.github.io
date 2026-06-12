@@ -59,7 +59,7 @@ export const experience = [
   {
     role: "Full Stack Software Engineer",
     company: "Averox",
-    period: "Aug 2024 — Present",
+    period: "Aug 2024 to Present",
     current: true,
     points: [
       "Developed and maintained full-stack applications using React.js, Node.js, and MongoDB for production business workflows.",
@@ -72,7 +72,7 @@ export const experience = [
   {
     role: "Junior Web Developer",
     company: "Elements Interactive",
-    period: "Feb 2024 — Jul 2024",
+    period: "Feb 2024 to Jul 2024",
     points: [
       "Built responsive web pages and application screens using JavaScript, React.js, HTML, and CSS.",
       "Improved frontend performance by cleaning components, optimizing layouts, and reducing unnecessary code.",
@@ -83,7 +83,7 @@ export const experience = [
   {
     role: "Software Quality Engineer",
     company: "Indaraj Inc",
-    period: "Nov 2022 — May 2023",
+    period: "Nov 2022 to May 2023",
     points: [
       "Tested web applications to identify functional issues, UI bugs, and regression problems before release.",
       "Created and executed manual test cases for different application modules.",
@@ -153,7 +153,7 @@ export const projects = [
 export const education = {
   degree: "BS Software Engineering",
   school: "COMSATS University Islamabad",
-  period: "2020 — 2024",
+  period: "2020 to 2024",
 };
 
 export const certifications = ["React Native", "React + Redux", "Swift iOS Development"];
