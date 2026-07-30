@@ -17,7 +17,7 @@ export default function App() {
       <CursorGlow />
       <ScrollProgress />
       <div className="relative z-10">
-        <Navbar />
+        {/* <Navbar /> */}
         <main>
           <Hero />
           <About />
